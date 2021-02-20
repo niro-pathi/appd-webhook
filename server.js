@@ -5,6 +5,7 @@ const https = require("https");
 
 const stringifyObject = require('stringify-object');
 
+//get environment variables
 const { WEBEX_SERVER, WEBEX_ACCESS_KEY, PORT} = require("./config");
 
 // create express application instance
