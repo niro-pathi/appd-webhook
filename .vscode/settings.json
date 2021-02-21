@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/2cfe2141-6853-4cef-80d9-635af3ad9b42/resourceGroups/rgasePOC01/providers/Microsoft.Web/sites/appd-webhook",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "."
 }
