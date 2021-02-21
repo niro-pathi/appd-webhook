@@ -6,7 +6,12 @@ const https = require("https");
 const stringifyObject = require('stringify-object');
 
 //get environment variables
-const { WEBEX_SERVER, WEBEX_ACCESS_KEY, PORT, APPINSIGHTS_INSTRUMENTATIONKEY} = require("./config");
+//const { WEBEX_SERVER, WEBEX_ACCESS_KEY, PORT, APPINSIGHTS_INSTRUMENTATIONKEY} = require("./config");
+
+const WEBEX_SERVER = process.env.WEBEX_SERVER;
+const WEBEX_ACCESS_KEY = process.env.WEBEX_ACCESS_KEY;
+const PORT = process.env.PORT;
+const APPINSIGHTS_INSTRUMENTATIONKEY = process.env.APPINSIGHTS_INSTRUMENTATIONKEY;
 
 let appInsights = require("applicationinsights");
 appInsights.setup(APPINSIGHTS_INSTRUMENTATIONKEY).start();
