@@ -35,7 +35,7 @@ function logger(req, res, next) {
 
 // express route
 app.get('/', function (req, res) {
-    res.send('Server is listening')
+    return res.json(healthcheck);
  })
 
 //health check 
