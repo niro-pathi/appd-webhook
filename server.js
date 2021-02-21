@@ -6,7 +6,10 @@ const https = require("https");
 const stringifyObject = require('stringify-object');
 
 //get environment variables
-const { WEBEX_SERVER, WEBEX_ACCESS_KEY, PORT} = require("./config");
+const { WEBEX_SERVER, WEBEX_ACCESS_KEY, PORT, APPINSIGHTS_INSTRUMENTATIONKEY} = require("./config");
+
+let appInsights = require("applicationinsights");
+appInsights.setup(APPINSIGHTS_INSTRUMENTATIONKEY).start();
 
 // create express application instance
 const app = express()
@@ -124,6 +127,6 @@ app.post('/webhook/',function (req,res, next){
 });
   
 // start the server
-const server = app.listen(8000, function(){
+const server = app.listen(PORT, function(){
     console.log('Listening on port 8000...')
 });
